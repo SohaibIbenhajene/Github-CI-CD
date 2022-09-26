@@ -1,0 +1,41 @@
+<!-- Ibenhajene Sohaib r0883629 -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="img/style.css" />
+    <title>Customer Registration</title>
+</head>
+<body>
+    <h1>Customer Registration</h1>
+
+    <form action="/submitcustomer">
+        <p>
+            <label for="firstName">First name </label>
+            <input type="text" name="firstName" id="firstName"/>
+        </p>
+        <p>
+            <label for="lastName">Surname </label>
+            <input type="text" name="lastName" id="lastName"/>
+        </p>
+        <p>
+            <label for="birthYear">Year of birth </label>
+            <input type="text" name="birthYear" id="birthYear"/>
+        </p>
+
+        <p th:each="shop : ${supermarket}">
+            <input type="radio" name="shopIndex"
+                th:checked="${shopStat.index} == 0"
+                th:value="${shopStat.index}"
+                th:id="${shopStat.index}"/>
+            <label th:for="${shopStat.index}"
+                th:text="${shop.getName()}"></label>
+        </p>
+
+        <p>
+            <input type="submit" name="submit" value="Continue and generate cardnumber"/>
+        </p>
+    </form>
+    <p><a href="/">Back to home page</a></p>
+</body>
+</html>

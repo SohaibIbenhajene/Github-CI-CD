@@ -1,13 +1,13 @@
-package fact.it.springgithubactionsdemo;
+package fact.it.supermarket;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringGithubActionsDemoApplication {
+public class SupermarketApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringGithubActionsDemoApplication.class, args);
+        SpringApplication.run(SupermarketApplication.class, args);
     }
 
 }
