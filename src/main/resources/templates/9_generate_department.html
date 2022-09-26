@@ -1,0 +1,47 @@
+<!-- Ibenhajene Sohaib r0883629 -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Department Registration</title>
+</head>
+<body>
+    <h1>Department registration</h1>
+    <form action="/submitdepartment">
+        <p>
+            <label for="departmentName">Name department: </label>
+            <input type="text" name="departmentName" id="departmentName"/>
+        </p>
+        <p>
+            <label for="departmentPhoto">Photo: </label>
+            <input type="text" name="departmentPhoto" id="departmentPhoto"/>
+        </p>
+        <p>
+            <label for="isRefrigerated">Refrigerated: </label>
+            <input type="checkbox" name="isRefrigerated" id="isRefrigerated"/>
+        </p>
+       <p>
+           <select name="shopIndex">
+               <option value="-1">In which supermarket?</option>
+               <option th:each="shop : ${supermarketList}"
+                       th:text="${shop.getName()}"
+                       th:value="${shopStat.index}">
+               </option>
+           </select>
+       </p>
+        <p>
+            <select name="staffIndex">
+                <option value="-1">Who is responsible for this department?</option>
+                <option th:each="staff : ${staffList}"
+                        th:text="${staff.getFirstName()} + ' ' + ${staff.getSurName()}"
+                        th:value="${staffStat.index}">
+                </option>
+            </select>
+        </p>
+        <p>
+            <input type="submit" name="submit" value="Confirm department"/>
+        </p>
+    </form>
+    <p><a href="/">Back to home page</a></p>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!-- Ibenhajene Sohaib r0883629 -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Found Department</title>
+</head>
+<body>
+    <h2 th:text="'We found this department: ' + ${department.getName()}"></h2>
+
+    <p th:if="${department.isRefrigerated()}">Refrigerated department</p>
+    <p th:if="${!department.isRefrigerated()}">No Refrigeration</p>
+    <p th:text="'Responsible: ' + ${department.getResponsible().getFirstName()} + ' ' + ${department.getResponsible().getSurName()}"></p>
+    <img onerror="this.src='img/noimage.jpg'" th:src="@{${department.getPhoto()}}"/>
+
+    <p><a href="/">Back to home page</a></p>
+</body>
+</html>
