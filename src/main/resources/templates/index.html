@@ -1,0 +1,37 @@
+<!-- Ibenhajene Sohaib r0883629 -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="img/style.css" />
+    <title>Supermarket project</title>
+</head>
+<body>
+    <h1>Supermarket project - Sohaib Ibenhajene</h1>
+    <ul>
+        <li class="homeList"><a href="/1_generate_customer" class="homepageButtons">New customer</a></li>
+        <li class="homeList"><a href="/6_show_customers" class="homepageButtons">Show customers</a></li>
+    </ul>
+    <ul>
+        <li class="homeList"><a href="/3_generate_staff" class="homepageButtons">New staff member</a></li>
+        <li class="homeList"><a href="/5_show_staff" class="homepageButtons">Show staff members</a></li>
+    </ul>
+    <ul>
+        <li class="homeList"><a href="/7_generate_supermarket" class="homepageButtons">New supermarket</a></li>
+        <li class="homeList"><a href="/8_show_supermarkets" class="homepageButtons">Show supermarkets</a></li>
+    </ul>
+    <ul>
+        <li class="homeList"><a href="/9_generate_department" class="homepageButtons">New department</a></li>
+    </ul>
+    <h2>Search for department</h2>
+    <form action="/searchdepartment">
+        <p>
+            <label for="departmentName">Name department: </label>
+            <input type="text" name="departmentName" id="departmentName"/>
+        </p>
+        <p>
+            <input type="submit" name="submit" value="Search department"/>
+        </p>
+    </form>
+</body>
+</html>
